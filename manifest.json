@@ -1,0 +1,23 @@
+{
+  "name": "facebook like modifier",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "change 'like' to whatever word you like",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://*.facebook.com/*",
+      "https://*.facebook.com/*"
+    ],
+    "js": [
+      "content-script.js"
+    ]
+  }],
+  "web_accessible_resources": [
+    "embedded-script.js"
+  ]
+}
